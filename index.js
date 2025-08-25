@@ -3,8 +3,12 @@ const app = express();
 const PORT = 2322;
 const cors = require("cors");
 require("./config/db");
+const dotenv = require ("dotenv");
 const userRouter = require("./router/user.route");
 const productRouter = require("./router/product.route");
+
+
+dotenv.config();
 
 app.use(express.json());
 app.use(cors());
